@@ -1,0 +1,72 @@
+ [
+    {
+      "title": "Guía 1",
+      "description": "Descripción de la guía 1",
+      "tags": [
+        { "label": "Windows", "color": "#FF6F61" },
+        { "label": "Open Source", "color": "blue" },
+        { "label": "Riesgo Medio", "color": "yellow" }
+      ],
+      "link": "https://github.com/ChrisTitusTech/winutil",
+      "linkText": "Leer",
+      "linkColor": "text-red-500"
+    },
+    {
+      "title": "Guía 2",
+      "description": "Descripción de la guía 2",
+      "tags": [
+        { "label": "Windows", "color": "#FF6F61" },
+        { "label": "Open Source", "color": "blue" },
+        { "label": "Bajo Riesgo", "color": "green" }
+      ],
+      "link": "https://github.com/microsoft/PowerToys",
+      "linkText": "Leer",
+      "linkColor": "text-red-500"
+    },
+    {
+      "title": "Guía 3",
+      "description": "Descripción de la guía 3",
+      "tags": [
+        { "label": "Windows 11", "color": "#6B5B95" },
+        { "label": "Open Source", "color": "blue" },
+        { "label": "Bajo Riesgo", "color": "green" }
+      ],
+      "link": "https://www.startallback.com/",
+      "linkText": "Leer",
+      "linkColor": "text-purple-500"
+    },
+    {
+      "title": "Guía 4",
+      "description": "Descripción de la guía 4",
+      "tags": [
+        { "label": "Windows", "color": "#6B5B95" },
+        { "label": "Open Source", "color": "blue" },
+        { "label": "Bajo Riesgo", "color": "green" }
+      ],
+      "link": "https://windhawk.net/",
+      "linkText": "Leer",
+      "linkColor": "text-purple-500"
+    },
+    {
+      "title": "Guía 5",
+      "description": "Descripción de la guía 5",
+      "tags": [
+        { "label": "Windows Todos", "color": "#4CAF50" },
+        { "label": "Open Source", "color": "blue" }
+      ],
+      "link": "https://www.bleachbit.org/",
+      "linkText": "Leer",
+      "linkColor": "text-green-500"
+    },
+    {
+      "title": "Guía 6",
+      "description": "Descripción de la guía 6",
+      "tags": [
+        { "label": "Windows", "color": "#4CAF50" },
+        { "label": "Riesgo Medio", "color": "yellow" }
+      ],
+      "link": "https://www.oo-software.com/en/shutup10",
+      "linkText": "Leer",
+      "linkColor": "text-green-500"
+    }
+  ]

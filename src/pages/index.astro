@@ -1,15 +1,6 @@
 ---
 import BaseLayout from "@/layouts/Layout.astro";
 import Card from "@/components/Card.astro";
-
-import { getAbsoluteLocaleUrl } from "astro:i18n";
-import { useTranslations } from "@/i18n/utils";
-import { languageList } from "@/i18n/ui";
-
-const currentLang = Astro.currentLocale || "en";
-const translateLabels = useTranslations(
-  currentLang as keyof typeof languageList
-);
 ---
 
 <BaseLayout title="Inicio - CodeXtremeOS">
@@ -31,14 +22,14 @@ const translateLabels = useTranslations(
         <p
           class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block"
         >
-          {translateLabels("home.description")}
+          Sistema operativo optimizado para el rendimiento y la seguridad.
         </p>
         <div class="animate-fade-in delay-200">
           <a
-            href={getAbsoluteLocaleUrl(currentLang, "descargas")}
+            href="/descargas"
             class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#FF6F61] to-[#6B5B95] rounded-lg hover:opacity-90 transition-opacity"
           >
-            {translateLabels("download.button")}
+            Descargar
             <svg
               class="w-4 h-4 ml-2"
               fill="none"
@@ -67,14 +58,14 @@ const translateLabels = useTranslations(
         <span
           class="bg-clip-text text-transparent bg-gradient-to-r from-[#6B5B95] to-[#8B7CB0]"
         >
-          {translateLabels("home.ques")}
+          ¿Qué es CodeXtremeOS?
         </span>
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Card
-          title={translateLabels("home.opti")}
-          description={translateLabels("home.desopti")}
+          title="Optimización"
+          description="Mejor rendimiento y eficiencia."
           borderColor="border-[#FF6F61]"
           gradientFrom="from-[#FF6F61]"
           gradientTo="to-[#FF8C78]"
@@ -83,8 +74,8 @@ const translateLabels = useTranslations(
           icon="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
         />
         <Card
-          title={translateLabels("home.dev.des")}
-          description={translateLabels("home.dev.des")}
+          title="Desarrollo"
+          description="Herramientas para desarrolladores."
           borderColor="border-[#6B5B95]"
           gradientFrom="from-[#6B5B95]"
           gradientTo="to-[#8B7CB0]"
@@ -93,8 +84,8 @@ const translateLabels = useTranslations(
           icon="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
         />
         <Card
-          title={translateLabels("home.safety")}
-          description={translateLabels("home.safe.des")}
+          title="Seguridad"
+          description="Protección avanzada contra amenazas."
           borderColor="border-[#4CAF50]"
           gradientFrom="from-[#4CAF50]"
           gradientTo="to-[#81C784]"
@@ -103,8 +94,8 @@ const translateLabels = useTranslations(
           icon="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
         />
         <Card
-          title={translateLabels("home.xbox")}
-          description={translateLabels("home.xbox.des")}
+          title="Compatibilidad con Xbox"
+          description="Juega tus juegos favoritos de Xbox."
           borderColor="border-[#0078D4]"
           gradientFrom="from-[#0078D4]"
           gradientTo="to-[#4D9EF7]"
@@ -113,8 +104,8 @@ const translateLabels = useTranslations(
           icon="M12 6v6m0 0v6m0-6h6m-6 0H6"
         />
         <Card
-          title={translateLabels("home.update")}
-          description={translateLabels("home.update.des")}
+          title="Actualizaciones"
+          description="Mantente al día con las últimas mejoras."
           borderColor="border-[#FF8C00]"
           gradientFrom="from-[#FF8C00]"
           gradientTo="to-[#FFA726]"
@@ -123,8 +114,8 @@ const translateLabels = useTranslations(
           icon="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
         />
         <Card
-          title={translateLabels("home.performance")}
-          description={translateLabels("home.performance.des")}
+          title="Rendimiento"
+          description="Máximo rendimiento en todas las tareas."
           borderColor="border-[#00B294]"
           gradientFrom="from-[#00B294]"
           gradientTo="to-[#26C6DA]"
@@ -133,8 +124,8 @@ const translateLabels = useTranslations(
           icon="M13 10V3L4 14h7v7l9-11h-7z"
         />
         <Card
-          title={translateLabels("home.drivers")}
-          description={translateLabels("home.drivers.des")}
+          title="Drivers"
+          description="Compatibilidad con los últimos drivers."
           borderColor="border-[#8A2BE2]"
           gradientFrom="from-[#8A2BE2]"
           gradientTo="to-[#BA68C8]"
@@ -143,8 +134,8 @@ const translateLabels = useTranslations(
           icon="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
         />
         <Card
-          title={translateLabels("home.appearance")}
-          description={translateLabels("home.appearance.des")}
+          title="Apariencia"
+          description="Personaliza el aspecto de tu sistema."
           borderColor="border-[#FF4081]"
           gradientFrom="from-[#FF4081]"
           gradientTo="to-[#FF80AB]"
@@ -153,8 +144,8 @@ const translateLabels = useTranslations(
           icon="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
         />
         <Card
-          title={translateLabels("home.support")}
-          description={translateLabels("home.support.des")}
+          title="Soporte"
+          description="Asistencia técnica y recursos."
           borderColor="border-[#00BCD4]"
           gradientFrom="from-[#00BCD4]"
           gradientTo="to-[#4DD0E1]"
@@ -173,14 +164,14 @@ const translateLabels = useTranslations(
         <span
           class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#FF8C78]"
         >
-          {translateLabels("home.features")}
+          Características
         </span>
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <Card
-          title={translateLabels("home.low")}
-          description={translateLabels("home.low.des")}
+          title="Bajo Consumo"
+          description="Optimizado para consumir menos recursos."
           borderColor="border-[#FF6F61]"
           gradientFrom="from-[#FF6F61]"
           gradientTo="to-[#FF8C78]"
@@ -189,8 +180,8 @@ const translateLabels = useTranslations(
           icon="M13 10V3L4 14h7v7l9-11h-7z"
         />
         <Card
-          title={translateLabels("home.compatibility")}
-          description={translateLabels("home.compatibility.des")}
+          title="Compatibilidad"
+          description="Compatible con una amplia gama de hardware."
           borderColor="border-[#6B5B95]"
           gradientFrom="from-[#6B5B95]"
           gradientTo="to-[#8B7CB0]"
@@ -199,8 +190,8 @@ const translateLabels = useTranslations(
           icon="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
         />
         <Card
-          title={translateLabels("home.security")}
-          description={translateLabels("home.security.des")}
+          title="Seguridad"
+          description="Protección avanzada contra amenazas."
           borderColor="border-[#4CAF50]"
           gradientFrom="from-[#4CAF50]"
           gradientTo="to-[#81C784]"
@@ -209,8 +200,8 @@ const translateLabels = useTranslations(
           icon="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
         />
         <Card
-          title={translateLabels("home.personalization")}
-          description={translateLabels("home.personalization.des")}
+          title="Personalización"
+          description="Personaliza el aspecto de tu sistema."
           borderColor="border-[#FFD700]"
           gradientFrom="from-[#FFD700]"
           gradientTo="to-[#FFE44D]"
@@ -232,8 +223,8 @@ const translateLabels = useTranslations(
       >
         <div class="px-6 py-5 text-center text-sm md:text-base">
           <p class="leading-relaxed">
-            🛠️ <strong>Important Information:</strong> This ISO was optimized and
-            created with
+            🛠️ <strong>Información Importante:</strong> Esta ISO fue optimizada y
+            creada con
             <a
               href="https://www.ntlite.com/download/"
               target="_blank"
@@ -242,13 +233,13 @@ const translateLabels = useTranslations(
               aria-label="Link to the official NTLite download site"
             >
               NTLite
-            </a>, a professional tool that anyone can use. The free version is
-            very powerful, though there is also a premium version with
-            additional features.
+            </a>, una herramienta profesional que cualquiera puede usar. La versión gratuita es
+            muy poderosa, aunque también hay una versión premium con
+            características adicionales.
             <br />
-            📚 Guides and tutorials for learning how to use <strong
+            📚 Guías y tutoriales para aprender a usar <strong
               >NTLite</strong
-            > are available in the
+            > están disponibles en el
             <a
               href="https://www.ntlite.com/community/index.php?forums/guides.9/"
               target="_blank"
@@ -256,21 +247,19 @@ const translateLabels = useTranslations(
               class="font-bold underline hover:text-gray-800 transition-colors"
               aria-label="Link to the official NTLite guide forum"
             >
-              official NTLite forum
+              foro oficial de NTLite
             </a>.
             <br />
-            ⚠️ This ISO is designed for inexperienced users or those who prefer a
-            quick solution. However, I
-            <strong>strongly recommend</strong> that each user creates their own
-            customized ISO by following the available guides on our website or in
-            the <strong>NTLite</strong> forum to ensure maximum security and control.
+            ⚠️ Esta ISO está diseñada para usuarios inexpertos o aquellos que prefieren una
+            solución rápida. Sin embargo, yo
+            <strong>recomiendo encarecidamente</strong> que cada usuario cree su propia
+            ISO personalizada siguiendo las guías disponibles en nuestro sitio web o en
+            el foro de <strong>NTLite</strong> para garantizar la máxima seguridad y control.
             <br /><br />
-            💡 Additionally, it is important to highlight that many of the popular
-            ISOs circulating online often flood users with ads and unnecessary third-party
-            programs, and they were created with
-            <strong>NTLite</strong>, even if their creators do not mention it.
-            This is why it is essential to personalize your own ISO to avoid
-            issues and obtain a clean and secure system.
+            💡 Además, es importante destacar que muchas de las ISOs populares que circulan en línea a menudo inundan a los usuarios con anuncios y programas de terceros innecesarios, y fueron creadas con
+            <strong>NTLite</strong>, incluso si sus creadores no lo mencionan.
+            Por eso es esencial personalizar tu propia ISO para evitar
+            problemas y obtener un sistema limpio y seguro.
           </p>
         </div>
       </div>
@@ -286,14 +275,14 @@ const translateLabels = useTranslations(
         <span
           class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-red-500"
         >
-          {translateLabels("home.go")}
+          ¡Comienza ahora!
         </span>
       </h2>
       <a
-        href={getAbsoluteLocaleUrl(currentLang, "descargas")}
+        href="/descargas"
         class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#FF6F61] to-[#6B5B95] rounded-lg hover:opacity-90 transition-opacity"
       >
-        {translateLabels("download.button")}
+        Descargar
         <svg
           class="w-4 h-4 ml-2"
           fill="none"

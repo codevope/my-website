@@ -1,136 +1,37 @@
 ---
 import VersionCard from "@/components/VersionCard.astro";
+import versions from "@/config/downloads/versions.json";
 import BaseLayout from "@/layouts/Layout.astro";
-import "@/styles/downloads.css"
+import "@/styles/downloads.css";
 
-import { getRelativeLocaleUrl } from "astro:i18n";
-import { useTranslations } from "@/i18n/utils";
-import { languageList } from "@/i18n/ui";
-
-const currentLang = Astro.currentLocale || "en";
-const t = useTranslations(currentLang as keyof typeof languageList);
-
-const latestVersions = [
-  {
-    title: t("downloads.latest_version.name"),
-    buildInfo: t("downloads.latest_version.build_info"),
-    tags: [
-      { label: t("downloads.tags.x64_uefi"), bgColor: "blue-100", textColor: "blue-800" },
-      { label: t("downloads.tags.stable"), bgColor: "green-100", textColor: "green-800" },
-      { label: `${t("downloads.tags.updated")}: 7-02-2025`, bgColor: "blue-100", textColor: "blue-800" },
-    ],
-    features: [
-      t("downloads.features.iso_size"),
-      t("downloads.features.debloated_optimized"),
-      t("downloads.features.full_updatable_build"),
-      t("downloads.features.automatic_updates_paused"),
-      t("downloads.features.intel_rst_drivers"),
-      t("downloads.features.extreme_performance"),
-      t("downloads.features.uwp_apps_support"),
-      t("downloads.features.additional_language_support"),
-      t("downloads.features.optional_features_support"),
-      t("downloads.features.improvements_optimizations"),
-      t("downloads.features.no_preinstalled_uwp_apps"),
-      t("downloads.features_no_internet"),
-      t("downloads.features_telemetry"),
-      t("downloads.features.ms_store_installer_included"),
-    ],
-    link: "https://www.mediafire.com/file_premium/mfmqqd8b218eozc/CodeXtremeOS11_24H2.iso/file",
-    linkText: t("downloads.download_button"),
-    linkColor: "text-red-500",
-    borderColor: "border-red-500",
-    textColor: "text-red-500",
-  },
-  {
-    title: t("downloads.version2.name"),
-    buildInfo: t("downloads.version2.build_info"),
-    tags: [
-      { label: t("downloads.tags.x64_uefi"), bgColor: "blue-100", textColor: "blue-800" },
-      { label: t("downloads.tags.stable"), bgColor: "green-100", textColor: "green-800" },
-      { label: `${t("downloads.tags.updated")}: 7-02-2025`, bgColor: "blue-100", textColor: "blue-800" },
-    ],
-    features: [
-      t("downloads.features.installed_size_4gb"),
-      t("downloads.features.debloated_optimized"),
-      t("downloads.features.full_updatable_build"),
-      t("downloads.features.extreme_performance"),
-      t("downloads.features.uwp_apps_support"),
-      t("downloads.features.additional_language_support"),
-      t("downloads.features.optional_features_support"),
-      t("downloads.features.improvements_optimizations"),
-      t("downloads.features.no_preinstalled_uwp_apps"),
-      t("downloads.features_no_internet"),
-      t("downloads.features_telemetry"),
-    ],
-    link: "https://www.mediafire.com/file_premium/6txytyd1iu5syr3/CodeXtremeOS11_23H2.iso/file",
-    linkText: t("downloads.download_button"),
-    linkColor: "text-purple-500",
-    borderColor: "border-purple-500",
-    textColor: "text-purple-500",
-  },
-];
-
-const previousVersions = [
-  {
-    title: t("downloads.version1.name"),
-    buildInfo: t("downloads.version1.build_info"),
-    tags: [
-      { label: t("downloads.tags.x64_uefi"), bgColor: "blue-100", textColor: "blue-800" },
-      { label: t("downloads.tags.stable"), bgColor: "green-100", textColor: "green-800" },
-      { label: t("downloads.tags.limited_support"), bgColor: "yellow-100", textColor: "yellow-800" },
-      { label: `${t("downloads.tags.updated")}: 7-02-2025`, bgColor: "blue-100", textColor: "blue-800" },
-    ],
-    features: [
-      t("downloads.features.installed_size_3gb"),
-      t("downloads.features.debloated_optimized"),
-      t("downloads.features.full_updatable_build"),
-      t("downloads.features.automatic_updates_paused"),
-      t("downloads.features.intel_rst_drivers"),
-      t("downloads.features.extreme_performance"),
-      t("downloads.features.uwp_apps_support"),
-      t("downloads.features.additional_language_support"),
-      t("downloads.features.optional_features_support"),
-      t("downloads.features.improvements_optimizations"),
-      t("downloads.features.no_preinstalled_uwp_apps"),
-      t("downloads.features_no_internet"),
-      t("downloads.features_telemetry"),
-      t("downloads.features.ms_store_installer_included"),
-    ],
-    link: "https://www.mediafire.com/file_premium/mho2gzlbaeo4n89/CodeXtremeOS10_22H2.iso/file",
-    linkText: t("downloads.download_button"),
-    linkColor: "text-green-500",
-    borderColor: "border-green-500",
-    textColor: "text-green-500",
-  },
-];
 ---
 
-<BaseLayout title={t("nav.download") + " - CodeXtremeOS"}>
+<BaseLayout title="Descargas - CodeXtremeOS">
   <!-- Anuncio NTLite -->
   <div class="bg-gradient-to-r from-[#FFD700]/90 to-[#FF6F61]/90 text-black mx-4 mt-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
     <div class="container mx-auto px-6 py-5 text-center text-sm md:text-base">
       <p class="leading-relaxed">
-        <strong>{t("downloads.announcement.title")}</strong><br />
-        {t("downloads.announcement.full_text") + " " + t("ntlite.ntlite_name") + " " + t("nav.guides")}<br /><br />
-        <strong>{t("downloads.announcement.security_title")}</strong><br />
-        {t("downloads.announcement.recommendation")}<br />
+        <strong>Información Importante:</strong><br />
+        Esta ISO fue optimizada y creada con NTLite, una herramienta profesional que cualquiera puede usar. La versión gratuita es muy poderosa, aunque también hay una versión premium con características adicionales.<br /><br />
+        <strong>Seguridad:</strong><br />
+        Recomiendo encarecidamente que cada usuario cree su propia ISO personalizada siguiendo las guías disponibles en nuestro sitio web o en el foro de NTLite para garantizar la máxima seguridad y control.<br />
         • <a
           href="https://www.ntlite.com/community/index.php"
           target="_blank"
           rel="noopener noreferrer"
           class="font-bold underline hover:text-[#2d2d2d] transition-colors"
-          aria-label={t("ntlite.aria.forum")}
+          aria-label="Foro oficial de NTLite"
         >
-          {t("downloads.announcement.official_guides")}
+          Guías oficiales
         </a><br />
-        • {t("downloads.announcement.our_guides")}{" "}
+        • Nuestras guías{" "}
         <a
-          href={getRelativeLocaleUrl(currentLang, "guias")}
+          href="/guias"
           class="font-bold underline hover:text-[#2d2d2d] transition-colors"
         >
-          {t("nav.guides")}
+          aquí
         </a><br /><br />
-        {t("downloads.announcement.custom_tip")}
+        Personaliza tu propia ISO para evitar problemas y obtener un sistema limpio y seguro.
       </p>
     </div>
   </div>
@@ -141,11 +42,11 @@ const previousVersions = [
       <div class="max-w-3xl mx-auto">
         <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]">
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#6B5B95]">
-            {t("nav.download")}
+            Descargas
           </span>
         </h1>
         <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block">
-          {t("downloads.hero_description")}
+          Encuentra las últimas versiones de CodeXtremeOS aquí.
         </p>
       </div>
     </div>
@@ -155,13 +56,13 @@ const previousVersions = [
   <main class="bg-gradient-to-br from-[#F4F4F4] to-[#eaeaea] dark:from-[#1A1A1A] py-16 relative">
     <h2 class="text-3xl font-bold text-center mb-12">
       <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#b4ff88] to-[#012201]">
-        {t("downloads.11_versions.title")}
+        Últimas Versiones
       </span>
     </h2>
     <div class="container mx-auto px-4">
       <!-- Contenedor Flex para las últimas versiones -->
       <div class="flex flex-col md:flex-row gap-8 justify-center">
-        {latestVersions.map(version => (
+        {versions.latest.map(version => (
           <VersionCard {...version} />
         ))}
       </div>
@@ -172,12 +73,12 @@ const previousVersions = [
   <section class="mb-24">
     <h2 class="text-3xl font-bold text-center mb-12">
       <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#a581ff] to-[#170a38]">
-        {t("downloads.previous_versions.title")}
+        Versiones Anteriores
       </span>
     </h2>
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row gap-8 justify-center">
-        {previousVersions.map(version => (
+        {versions.previous.map(version => (
           <VersionCard {...version} />
         ))}
       </div>

@@ -1,0 +1,94 @@
+{
+  "latest": [
+    {
+      "title": "Última Versión",
+      "buildInfo": "Versión 24H2 - Actualizada el 7-02-2025",
+      "tags": [
+        { "label": "x64 UEFI", "bgColor": "blue-100", "textColor": "blue-800" },
+        { "label": "Estable", "bgColor": "green-100", "textColor": "green-800" },
+        { "label": "Actualizado: 7-02-2025", "bgColor": "blue-100", "textColor": "blue-800" }
+      ],
+      "features": [
+        "Tamaño del ISO: 4GB",
+        "Optimizado y sin bloatware",
+        "Construcción completamente actualizable",
+        "Actualizaciones automáticas pausadas",
+        "Drivers Intel RST incluidos",
+        "Rendimiento extremo",
+        "Soporte para aplicaciones UWP",
+        "Soporte para idiomas adicionales",
+        "Soporte para características opcionales",
+        "Mejoras y optimizaciones",
+        "Sin aplicaciones UWP preinstaladas",
+        "No requiere conexión a internet",
+        "Telemetría desactivada",
+        "Instalador de Microsoft Store incluido"
+      ],
+      "link": "https://www.mediafire.com/file_premium/mfmqqd8b218eozc/CodeXtremeOS11_24H2.iso/file",
+      "linkText": "Descargar",
+      "linkColor": "text-red-500",
+      "borderColor": "border-red-500",
+      "textColor": "text-red-500"
+    },
+    {
+      "title": "Versión 23H2",
+      "buildInfo": "Versión 23H2 - Actualizada el 7-02-2025",
+      "tags": [
+        { "label": "x64 UEFI", "bgColor": "blue-100", "textColor": "blue-800" },
+        { "label": "Estable", "bgColor": "green-100", "textColor": "green-800" },
+        { "label": "Actualizado: 7-02-2025", "bgColor": "blue-100", "textColor": "blue-800" }
+      ],
+      "features": [
+        "Tamaño instalado: 4GB",
+        "Optimizado y sin bloatware",
+        "Construcción completamente actualizable",
+        "Rendimiento extremo",
+        "Soporte para aplicaciones UWP",
+        "Soporte para idiomas adicionales",
+        "Soporte para características opcionales",
+        "Mejoras y optimizaciones",
+        "Sin aplicaciones UWP preinstaladas",
+        "No requiere conexión a internet",
+        "Telemetría desactivada"
+      ],
+      "link": "https://www.mediafire.com/file_premium/6txytyd1iu5syr3/CodeXtremeOS11_23H2.iso/file",
+      "linkText": "Descargar",
+      "linkColor": "text-purple-500",
+      "borderColor": "border-purple-500",
+      "textColor": "text-purple-500"
+    }
+  ],
+  "previous": [
+    {
+      "title": "Versión 22H2",
+      "buildInfo": "Versión 22H2 - Actualizada el 7-02-2025",
+      "tags": [
+        { "label": "x64 UEFI", "bgColor": "blue-100", "textColor": "blue-800" },
+        { "label": "Estable", "bgColor": "green-100", "textColor": "green-800" },
+        { "label": "Soporte limitado", "bgColor": "yellow-100", "textColor": "yellow-800" },
+        { "label": "Actualizado: 7-02-2025", "bgColor": "blue-100", "textColor": "blue-800" }
+      ],
+      "features": [
+        "Tamaño instalado: 3GB",
+        "Optimizado y sin bloatware",
+        "Construcción completamente actualizable",
+        "Actualizaciones automáticas pausadas",
+        "Drivers Intel RST incluidos",
+        "Rendimiento extremo",
+        "Soporte para aplicaciones UWP",
+        "Soporte para idiomas adicionales",
+        "Soporte para características opcionales",
+        "Mejoras y optimizaciones",
+        "Sin aplicaciones UWP preinstaladas",
+        "No requiere conexión a internet",
+        "Telemetría desactivada",
+        "Instalador de Microsoft Store incluido"
+      ],
+      "link": "https://www.mediafire.com/file_premium/mho2gzlbaeo4n89/CodeXtremeOS10_22H2.iso/file",
+      "linkText": "Descargar",
+      "linkColor": "text-green-500",
+      "borderColor": "border-green-500",
+      "textColor": "text-green-500"
+    }
+  ]
+}

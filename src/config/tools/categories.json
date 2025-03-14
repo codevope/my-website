@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Categoría 1",
+    "borderColor": "text-red-500",
+    "gradientFrom": "#FF6F61",
+    "gradientTo": "#FF8C78",
+    "tools": [
+      {
+        "title": "Herramienta 1",
+        "description": "Descripción de la herramienta 1",
+        "tags": [
+          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Open Source", "color": "blue" },
+          { "label": "Riesgo Medio", "color": "yellow" }
+        ],
+        "link": "https://github.com/ChrisTitusTech/winutil",
+        "linkText": "Descargar",
+        "linkColor": "text-red-500"
+      },
+      {
+        "title": "Herramienta 2",
+        "description": "Descripción de la herramienta 2",
+        "tags": [
+          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Open Source", "color": "blue" },
+          { "label": "Bajo Riesgo", "color": "green" }
+        ],
+        "link": "https://github.com/microsoft/PowerToys",
+        "linkText": "Descargar",
+        "linkColor": "text-red-500"
+      }
+    ]
+  },
+  {
+    "title": "Categoría 2",
+    "borderColor": "text-purple-500",
+    "gradientFrom": "#6B5B95",
+    "gradientTo": "#8B7CB0",
+    "tools": [
+      {
+        "title": "Herramienta 3",
+        "description": "Descripción de la herramienta 3",
+        "tags": [
+          { "label": "Windows 11", "color": "#6B5B95" },
+          { "label": "Open Source", "color": "blue" },
+          { "label": "Bajo Riesgo", "color": "green" }
+        ],
+        "link": "https://www.startallback.com/",
+        "linkText": "Descargar",
+        "linkColor": "text-purple-500"
+      },
+      {
+        "title": "Herramienta 4",
+        "description": "Descripción de la herramienta 4",
+        "tags": [
+          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Open Source", "color": "blue" },
+          { "label": "Bajo Riesgo", "color": "green" }
+        ],
+        "link": "https://windhawk.net/",
+        "linkText": "Descargar",
+        "linkColor": "text-purple-500"
+      }
+    ]
+  },
+  {
+    "title": "Categoría 3",
+    "borderColor": "text-green-500",
+    "gradientFrom": "#4CAF50",
+    "gradientTo": "#81C784",
+    "tools": [
+      {
+        "title": "Herramienta 5",
+        "description": "Descripción de la herramienta 5",
+        "tags": [
+          { "label": "Windows Todos", "color": "#4CAF50" },
+          { "label": "Open Source", "color": "blue" }
+        ],
+        "link": "https://www.bleachbit.org/",
+        "linkText": "Descargar",
+        "linkColor": "text-green-500"
+      },
+      {
+        "title": "Herramienta 6",
+        "description": "Descripción de la herramienta 6",
+        "tags": [
+          { "label": "Windows", "color": "#4CAF50" },
+          { "label": "Riesgo Medio", "color": "yellow" }
+        ],
+        "link": "https://www.oo-software.com/en/shutup10",
+        "linkText": "Descargar",
+        "linkColor": "text-green-500"
+      }
+    ]
+  }
+]

@@ -12,10 +12,6 @@ const {
   icon,
   tags,
 } = Astro.props;
-
-import { useTranslations } from "@/i18n/utils";
-const currentLang: "es" | "en" = (Astro.currentLocale as "es" | "en") || "es";
-const translateLabels = useTranslations(currentLang);
 ---
 
 <div
@@ -33,11 +29,11 @@ const translateLabels = useTranslations(currentLang);
         class={`bg-clip-text text-transparent bg-gradient-to-r ${gradientFrom} ${gradientTo}`}
       >
         {icon && <span class="mr-2">{icon}</span>}
-        {translateLabels(title)}
+        {title}
       </span>
     </h2>
     <p class="text-sm text-gray-600 dark:text-gray-300 mb-6">
-      {translateLabels(description)}
+      {description}
     </p>
 
     {
@@ -60,11 +56,7 @@ const translateLabels = useTranslations(currentLang);
       rel="noopener noreferrer"
       class={`inline-flex items-center ${textColor} ${hoverTextColor} font-medium text-sm`}
     >
-      {
-        linkText
-          ? translateLabels(linkText)
-          : translateLabels("guides.view_more")
-      }
+      {linkText ? linkText : "Ver más"}
       <svg
         class="w-5 h-5 ml-2"
         fill="none"

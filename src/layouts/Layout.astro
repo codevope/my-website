@@ -1,64 +1,44 @@
 ---
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import { languageList } from "@/i18n/ui";
 import "@/styles/global.css";
-
-
-const currentLang = Astro.currentLocale || "en";
-currentLang as keyof typeof languageList;
 ---
 
 <!doctype html>
-<html lang={currentLang} class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Título SEO -->
-    <title>CodeXtreme - Windows Gaming</title>
+    <title>Codevo</title>
 
     <!-- Meta Tags SEO -->
     <meta
       name="description"
-      content="Descarga CodeXtremeOS, la mejor versión de Windows optimizada para gaming y máximo rendimiento. Eleva tu experiencia de juego a otro nivel."
+      content="Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea."
     />
     <meta name="robots" content="index, follow" />
     <meta
       name="keywords"
-      content="Windows optimizado, gaming, rendimiento, CodeXtremeOS, sistema operativo para gamers, PC gaming, optimización Windows"
+      content="desarrollo web, soluciones digitales, Codevo, empresa de desarrollo web, servicios web, diseño web"
     />
 
-    <!-- Open Graph y Twitter -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="CodeXtremeOS" />
+    <meta property="og:title" content="Codevo - Desarrollo Web" />
     <meta
       property="og:description"
-      content="La mejor versión de Windows modificada para gaming y máximo rendimiento. Descarga CodeXtremeOS ahora y lleva tu experiencia de juego al siguiente nivel."
+      content="Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea."
     />
     <meta
       property="og:image"
-      content="https://www.codextreme.me/imagen-previa.png"
+      content="https://www.codevo.pe/logo_social.png"
     />
-    <meta property="og:url" content="https://www.codextreme.me/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CodeXtremeOS" />
-    <meta
-      name="twitter:description"
-      content="La mejor versión de Windows modificada para gaming y máximo rendimiento. Descarga CodeXtremeOS ahora y lleva tu experiencia de juego al siguiente nivel."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.codextreme.me/imagen-twitter.png"
-    />
-    <meta
-      name="google-site-verification"
-      content="X4pVBsZ9Qujczrzm_M8EeRE0Kvom53DCD6zt2ffWXsI"
-    />
+    <meta property="og:url" content="https://www.codevo.pe/" />
 
     <!-- Favicon y iconos -->
-    <link rel="icon" href="/favicon.webp" sizes="32x32" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/assets/img/codevo.ico" sizes="32x32" />
     <meta name="theme-color" content="#6B5B95" />
 
     <!-- Schema Markup JSON-LD -->
@@ -66,12 +46,12 @@ currentLang as keyof typeof languageList;
       {
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "url": "https://www.codextreme.me",
-        "name": "CodeXtremeOS",
-        "description": "La mejor versión de Windows modificada para gaming y máximo rendimiento.",
+        "url": "https://www.codevo.pe",
+        "name": "Codevo",
+        "description": "Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea.",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://www.codextreme.me/buscar?q={search_term_string}",
+          "target": "https://www.codevo.pe/buscar?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
