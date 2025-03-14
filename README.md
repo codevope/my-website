@@ -44,11 +44,11 @@ Codevo es una empresa de desarrollo web dedicada a crear soluciones web innovado
 
 ## Contact
 
-Victor Olivares - [@viktorolivares](https://twitter.com/viktorolivares) - viktorolivares@gmail.com
+[![Gmail][Gmail.com]](mailto:codevo.pe@gmail.com)
 
-GitHub: [viktorolivares](https://github.com/viktorolivares)
+[![GitHub][GitHub.com]](https://github.com/viktorolivares)
 
-LinkedIn: [viktorolivares](https://www.linkedin.com/in/viktorolivares/)
+[![LinkedIn][LinkedIn.com]](https://www.linkedin.com/in/viktorolivares/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -75,3 +75,6 @@ LinkedIn: [viktorolivares](https://www.linkedin.com/in/viktorolivares/)
 [JavaScript-url]: https://www.javascript.com/
 [PHP.net]: https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white
 [PHP-url]: https://www.php.net/
+[Gmail.com]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[GitHub.com]: https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white
+[LinkedIn.com]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
