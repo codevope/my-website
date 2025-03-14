@@ -1,0 +1,146 @@
+---
+import SupportNotice from "@/components/SupportNews.astro";
+import GuideCard from "@/components/GuideCard.astro";
+import BaseLayout from "@/layouts/Layout.astro";
+
+import { useTranslations } from "@/i18n/utils";
+import { languageList } from "@/i18n/ui";
+
+const currentLang = Astro.currentLocale || "en";
+const translateLabels = useTranslations(currentLang as keyof typeof languageList);
+
+const guides = [
+  {
+    title: "guides.guide1.title",
+    description: "guides.guide1.description",
+    link: "https://www.youtube.com/watch?v=fqTt4DarrOU",
+    borderColor: "border-[#FF6F61]",
+    textColor: "text-[#FF6F61]",
+    hoverTextColor: "hover:text-[#FF8C78]",
+    gradientFrom: "from-[#FF6F61]",
+    gradientTo: "to-[#FF8C78]",
+    icon: "🛠️",
+  },
+  {
+    title: "guides.guide2.title",
+    description: "guides.guide2.description",
+    link: "https://www.youtube.com/watch?v=dnE5RRnIvKI",
+    borderColor: "border-[#6B5B95]",
+    textColor: "text-[#6B5B95]",
+    hoverTextColor: "hover:text-[#8B7CB0]",
+    gradientFrom: "from-[#6B5B95]",
+    gradientTo: "to-[#8B7CB0]",
+    icon: "⚡",
+  },
+  {
+    title: "guides.guide3.title",
+    description: "guides.guide3.description",
+    link: "https://www.youtube.com/watch?v=vqYixOxhdgc",
+    borderColor: "border-[#FFD700]",
+    textColor: "text-[#FFD700]",
+    hoverTextColor: "hover:text-[#FFB300]",
+    gradientFrom: "from-[#FFD700]",
+    gradientTo: "to-[#FFB300]",
+    icon: "🎨",
+  },
+  {
+    title: "guides.guide4.title",
+    description: "guides.guide4.description",
+    link: "https://www.youtube.com/watch?v=WfpFgQdWT20&list=PL0rDzzHg4fUli-ciiihzmJnr-scB0FuY8",
+    borderColor: "border-[#4CAF50]",
+    textColor: "text-[#4CAF50]",
+    hoverTextColor: "hover:text-[#81C784]",
+    gradientFrom: "from-[#4CAF50]",
+    gradientTo: "to-[#81C784]",
+    icon: "🔧",
+  },
+  {
+    title: "guides.guide5.title",
+    description: "guides.guide5.description",
+    link: "https://www.youtube.com/watch?v=5Q8CHJxlil4",
+    borderColor: "border-[#00BCD4]",
+    textColor: "text-[#00BCD4]",
+    hoverTextColor: "hover:text-[#4DD0E1]",
+    gradientFrom: "from-[#00BCD4]",
+    gradientTo: "to-[#4DD0E1]",
+    icon: "🚀",
+  },
+  {
+    title: "guides.guide6.title",
+    description: "guides.guide6.description",
+    link: "https://windowsforum.com/threads/step-by-step-guide-how-to-do-a-clean-install-of-windows-11.264029/",
+    borderColor: "border-[#FF5722]",
+    textColor: "text-[#FF5722]",
+    hoverTextColor: "hover:text-[#FF8A65]",
+    gradientFrom: "from-[#FF5722]",
+    gradientTo: "to-[#FF8A65]",
+    icon: "🤖",
+  },
+  {
+    title: "guides.guide7.title",
+    description: "guides.guide7.description",
+    link: "https://www.youtube.com/watch?v=iBiNfa32AnE",
+    borderColor: "border-[#8E24AA]",
+    textColor: "text-[#8E24AA]",
+    hoverTextColor: "hover:text-[#BA68C8]",
+    gradientFrom: "from-[#8E24AA]",
+    gradientTo: "to-[#BA68C8]",
+    icon: "🔍",
+  },
+  {
+    title: "guides.guide8.title",
+    description: "guides.guide8.description",
+    link: "https://alternativeto.net/",
+    borderColor: "border-[#3F51B5]",
+    textColor: "text-[#3F51B5]",
+    hoverTextColor: "hover:text-[#7986CB]",
+    gradientFrom: "from-[#3F51B5]",
+    gradientTo: "to-[#7986CB]",
+    icon: "💻",
+  },
+];
+---
+
+<BaseLayout title={translateLabels("guides.meta_title")}>
+  {/* Hero Section */}
+  <div class="container mx-auto px-4 text-center relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#6B5B95]">
+          {translateLabels("guides.title")}
+        </span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block">
+        {translateLabels("guides.description")}
+      </p>
+    </div>
+  </div>
+
+  {/* Contenido Principal */}
+  <main class="bg-gradient-to-br from-[#1A1A1A] py-16 relative">
+    {/* Aviso de Apoyo a Creadores */}
+    <SupportNotice />
+
+    {/* Grid de Guías */}
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        {guides.map((guide) => (
+          <GuideCard {...guide} />
+        ))}
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .group:hover h2 span {
+    background-position: 100% 50%;
+    transition: background-position 0.5s ease-out;
+  }
+
+  h2 span {
+    background-size: 200% auto;
+    background-position: 0% 50%;
+    transition: background-position 0.3s ease-in;
+  }
+</style>

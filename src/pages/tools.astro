@@ -1,0 +1,164 @@
+---
+import CategorySection from "@/components/CategorySection.astro";
+import BaseLayout from "@/layouts/Layout.astro";
+import "@/styles/global.css";
+import "@/styles/tools.css";
+
+import { useTranslations } from "@/i18n/utils";
+import { languageList } from "@/i18n/ui";
+
+const currentLang = Astro.currentLocale || "en";
+const translateLabels = useTranslations(
+  currentLang as keyof typeof languageList
+);
+
+const categories = [
+  {
+    title: translateLabels("tools.category1.title"),
+    borderColor: "text-red-500",
+    gradientFrom: "#FF6F61",
+    gradientTo: "#FF8C78",
+    tools: [
+      {
+        title: translateLabels("tools.tool1.name"),
+        description: translateLabels("tools.tool1.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.medium_risk"), color: "yellow" },
+        ],
+        link: "https://github.com/ChrisTitusTech/winutil",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-red-500",
+      },
+      {
+        title: translateLabels("tools.tool2.name"),
+        description: translateLabels("tools.tool2.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://github.com/microsoft/PowerToys",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-red-500",
+      },
+    ],
+  },
+  {
+    title: translateLabels("tools.category2.title"),
+    borderColor: "text-purple-500",
+    gradientFrom: "#6B5B95",
+    gradientTo: "#8B7CB0",
+    tools: [
+      {
+        title: translateLabels("tools.tool3.name"),
+        description: translateLabels("tools.tool3.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows11"), color: "#6B5B95" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://www.startallback.com/",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("tools.tool4.name"),
+        description: translateLabels("tools.tool4.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://windhawk.net/",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-purple-500",
+      },
+    ],
+  },
+  {
+    title: translateLabels("tools.category3.title"),
+    borderColor: "text-green-500",
+    gradientFrom: "#4CAF50",
+    gradientTo: "#81C784",
+    tools: [
+      {
+        title: translateLabels("tools.tool5.name"),
+        description: translateLabels("tools.tool5.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows_all"), color: "#4CAF50" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+        ],
+        link: "https://www.bleachbit.org/",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("tools.tool6.name"),
+        description: translateLabels("tools.tool6.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("tools.tags.medium_risk"), color: "yellow" },
+        ],
+        link: "https://www.oo-software.com/en/shutup10",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-green-500",
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout title={translateLabels("tools.meta_title")}>
+  <!-- Hero Section -->
+  <div class="container mx-auto text-center px-4 relative z-10">
+    <div class="max-w-3xl mx-auto">
+      <h1
+        class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]"
+      >
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#6B5B95]"
+        >
+          {translateLabels("tools.title")}
+        </span>
+      </h1>
+
+      <p
+        class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block"
+      >
+        {translateLabels("tools.subtitle")}
+      </p>
+    </div>
+  </div>
+  <section class="py-12 mb-8 relative">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-gradient-to-r from-[#2196F3]/90 to-[#9C27B0]/90 text-white mx-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="container mx-auto px-6 py-5 text-center text-sm md:text-base">
+          <p class="leading-relaxed">
+            ⭐ <strong>{translateLabels("tools.opensource.title")}</strong>{" "}
+            {translateLabels("tools.opensource.description")}
+            <br />
+            🚀 {translateLabels("tools.opensource.how_to_help")}
+            <br />
+            1. {translateLabels("tools.opensource.step1")}
+            <br />
+            2. {translateLabels("tools.opensource.step2")}
+            <br />
+            3. {translateLabels("tools.opensource.step3")}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sección de Herramientas -->
+  <main class="bg-gradient-to-br from-[#1A1A1A] py-16 relative">
+    <div class="container mx-auto px-4 mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {categories.map(category => (
+          <CategorySection {...category} />
+        ))}
+      </div>
+    </div>
+  </main>
+</BaseLayout>

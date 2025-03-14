@@ -1,0 +1,328 @@
+---
+import CategorySection from "@/components/CategorySection.astro";
+import BaseLayout from "@/layouts/Layout.astro";
+import "@/styles/software.css";
+import "@/styles/global.css";
+
+import { useTranslations } from "@/i18n/utils";
+import { languageList } from "@/i18n/ui";
+
+const currentLang = Astro.currentLocale || "en";
+const translateLabels = useTranslations(currentLang as keyof typeof languageList);
+
+const categories = [
+  {
+    title: translateLabels("software.category1.title"),
+    borderColor: "text-blue-500",
+    gradientFrom: "#6B5B95",
+    gradientTo: "#8B7CB0",
+    tools: [
+      {
+        title: translateLabels("software.tool1.name"),
+        description: translateLabels("software.tool1.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("software.tags.opensource"), color: "blue" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://www.microsoft.com/es-es/download/details.aspx?id=35",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-blue-500",
+      },
+      {
+        title: translateLabels("software.tool2.name"),
+        description: translateLabels("software.tool2.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("software.tags.opensource"), color: "blue" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-blue-500",
+      },
+      {
+        title: translateLabels("software.tool3.name"),
+        description: translateLabels("software.tool3.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("software.tags.opensource"), color: "blue" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.408-windows-x64-installer",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-blue-500",
+      },
+      {
+        title: translateLabels("software.tool4.name"),
+        description: translateLabels("software.tool4.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("software.tags.opensource"), color: "blue" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.428-windows-x64-installer",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-blue-500",
+      },
+      {
+        title: translateLabels("software.tool5.name"),
+        description: translateLabels("software.tool5.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("software.tags.opensource"), color: "blue" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://dotnet.microsoft.com/es-es/download/dotnet/thank-you/sdk-7.0.410-windows-x64-installer",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-blue-500",
+      },
+      {
+        title: translateLabels("software.tool6.name"),
+        description: translateLabels("software.tool6.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("software.tags.opensource"), color: "blue" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.406-windows-x64-installer",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-blue-500",
+      },
+      {
+        title: translateLabels("software.tool7.name"),
+        description: translateLabels("software.tool7.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("software.tags.opensource"), color: "blue" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH#download",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-blue-500",
+      },
+    ],
+  },
+  {
+    title: translateLabels("software.category2.title"),
+    borderColor: "text-green-500",
+    gradientFrom: "#4CAF50",
+    gradientTo: "#81C784",
+    tools: [
+      {
+        title: translateLabels("software.tool8.name"),
+        description: translateLabels("software.tool8.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://download.gimp.org/gimp/v2.10/windows/gimp-2.10.38-setup-1.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("software.tool9.name"),
+        description: translateLabels("software.tool9.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("software.tags.stable"), color: "red" },
+        ],
+        link: "https://download.kde.org/stable/krita/5.2.9/krita-x64-5.2.9-setup.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("software.tool10.name"),
+        description: translateLabels("software.tool10.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("software.tags.stable"), color: "red" },
+        ],
+        link: "https://www.blender.org/download/release/Blender4.3/blender-4.3.2-windows-x64.msi/",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("software.tool11.name"),
+        description: translateLabels("software.tool11.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("software.tags.stable"), color: "blue" },
+        ],
+        link: "https://inkscape.org/es/release/inkscape-1.4/windows/64-bit/msi/dl/",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("software.tool12.name"),
+        description: translateLabels("software.tool12.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("software.tags.stable"), color: "purple" },
+        ],
+        link: "https://github.com/darktable-org/darktable/releases/download/release-5.0.1/darktable-5.0.1-win64.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("software.tool13.name"),
+        description: translateLabels("software.tool13.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://muse-cdn.com/Muse_Hub.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("software.tool14.name"),
+        description: translateLabels("software.tool14.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("software.tags.stable"), color: "orange" },
+        ],
+        link: "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.1-Windows-Installer.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-green-500",
+      },
+    ],
+  },
+  {
+    title: translateLabels("software.category3.title"),
+    borderColor: "text-purple-500",
+    gradientFrom: "#FF6F61",
+    gradientTo: "#6B5B95",
+    tools: [
+      {
+        title: translateLabels("software.tool15.name"),
+        description: translateLabels("software.tool15.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("software.tags.stable"), color: "blue" },
+        ],
+        link: "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.7/npp.8.7.7.Installer.x64.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("software.tool16.name"),
+        description: translateLabels("software.tool16.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("software.tags.stable"), color: "red" },
+        ],
+        link: "https://7-zip.org/a/7z2409-x64.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("software.tool17.name"),
+        description: translateLabels("software.tool17.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("software.tags.stable"), color: "red" },
+        ],
+        link: "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("software.tool18.name"),
+        description: translateLabels("software.tool18.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("software.tags.stable"), color: "blue" },
+        ],
+        link: "https://es.libreoffice.org/colabora/dl/win-x86_64/25.2.0/es/LibreOffice_25.2.0_Win_x86-64.msi",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("software.tool19.name"),
+        description: translateLabels("software.tool19.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("software.tags.stable"), color: "purple" },
+        ],
+        link: "https://github.com/paintdotnet/release/releases/download/v5.1.4/paint.net.5.1.4.install.anycpu.web.zip",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("software.tool20.name"),
+        description: translateLabels("software.tool20.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("software.tags.stable"), color: "green" },
+        ],
+        link: "https://www.winrar.es/descargas/103/descargar-winrar-para-windows-x64-en-espa-ol",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("software.tool21.name"),
+        description: translateLabels("software.tool21.description"),
+        tags: [
+          { label: translateLabels("software.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("software.tags.stable"), color: "orange" },
+        ],
+        link: "https://download.cpuid.com/cpu-z/cpu-z_2.14-en.zip",
+        linkText: translateLabels("software.download"),
+        linkColor: "text-purple-500",
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout title={translateLabels("software.meta_title")}>
+  <!-- Hero Section -->
+  <div class="container mx-auto text-center px-4 relative z-10">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#6B5B95]">
+          {translateLabels("software.title")}
+        </span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block">
+        {translateLabels("software.subtitle")}
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección de información Open Source -->
+  <section class="py-12 mb-8 relative">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-gradient-to-r from-[#2196F3]/90 to-[#9C27B0]/90 text-white mx-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="container mx-auto px-6 py-5 text-center text-sm md:text-base">
+          <p class="leading-relaxed">
+            ⭐ <strong>{translateLabels("software.opensource.title")}</strong>
+            {translateLabels("software.opensource.description")}
+            <br />
+            {translateLabels("software.opensource.description2")}
+            <br />
+            🚀 {translateLabels("software.opensource.how_to_help")}
+            <br />
+            1. {translateLabels("software.opensource.step1")}
+            <br />
+            2. {translateLabels("software.opensource.step2")}
+            <br />
+            3. {translateLabels("software.opensource.step3")}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Software -->
+  <main class="bg-gradient-to-br from-[#1A1A1A] py-16 relative">
+    <div class="container mx-auto px-4 mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {categories.map(category => (
+          <CategorySection {...category} />
+        ))}
+      </div>
+    </div>
+  </main>
+</BaseLayout>
