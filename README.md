@@ -42,13 +42,13 @@ Codevo es una empresa de desarrollo web dedicada a crear soluciones web innovado
 
 ---
 
-## Contact
-
-[![Gmail][Gmail.com]](mailto:codevo.pe@gmail.com)
+## Contact: codevo.pe@gmail.com
 
 [![GitHub][GitHub.com]](https://github.com/viktorolivares)
 
-[![LinkedIn][LinkedIn.com]](https://www.linkedin.com/in/viktorolivares/)
+[![LinkedIn][LinkedIn.com]](https://www.linkedin.com/company/104911515)
+
+[![WhatsApp][WhatsApp.com]](https://wa.me/51963310898)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -78,3 +78,4 @@ Codevo es una empresa de desarrollo web dedicada a crear soluciones web innovado
 [Gmail.com]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
 [GitHub.com]: https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white
 [LinkedIn.com]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[WhatsApp.com]: https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white
