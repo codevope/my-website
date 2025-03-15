@@ -1,1 +1,19 @@
+
 @import "tailwindcss";
+
+/* Plugins */
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+/* Dark Theme */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom Theme */
+@theme {
+  --font-display: "Roboto Mono", "monospace";
+  --container-padding: 2rem;
+  
+  /* Sombras */
+  --shadow-xl-dark: 0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 8px 10px -6px rgba(255, 255, 255, 0.1);
+}
+

@@ -3,7 +3,7 @@
       "title": "Guía 1",
       "description": "Descripción de la guía 1",
       "tags": [
-        { "label": "Windows", "color": "#FF6F61" },
+        { "label": "Windows", "color": "#294bbc" },
         { "label": "Open Source", "color": "blue" },
         { "label": "Riesgo Medio", "color": "yellow" }
       ],
@@ -15,7 +15,7 @@
       "title": "Guía 2",
       "description": "Descripción de la guía 2",
       "tags": [
-        { "label": "Windows", "color": "#FF6F61" },
+        { "label": "Windows", "color": "#294bbc" },
         { "label": "Open Source", "color": "blue" },
         { "label": "Bajo Riesgo", "color": "green" }
       ],
@@ -27,7 +27,7 @@
       "title": "Guía 3",
       "description": "Descripción de la guía 3",
       "tags": [
-        { "label": "Windows 11", "color": "#6B5B95" },
+        { "label": "Windows 11", "color": "#b6c2fa" },
         { "label": "Open Source", "color": "blue" },
         { "label": "Bajo Riesgo", "color": "green" }
       ],
@@ -39,7 +39,7 @@
       "title": "Guía 4",
       "description": "Descripción de la guía 4",
       "tags": [
-        { "label": "Windows", "color": "#6B5B95" },
+        { "label": "Windows", "color": "#b6c2fa" },
         { "label": "Open Source", "color": "blue" },
         { "label": "Bajo Riesgo", "color": "green" }
       ],

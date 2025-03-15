@@ -1,56 +1,29 @@
 ---
-import VersionCard from "@/components/VersionCard.astro";
+import VersionCard from "@/components/astro/VersionCard.astro";
 import versions from "@/config/downloads/versions.json";
 import BaseLayout from "@/layouts/Layout.astro";
 import "@/styles/downloads.css";
 
 ---
 
-<BaseLayout title="Descargas - CodeXtremeOS">
-  <!-- Anuncio NTLite -->
-  <div class="bg-gradient-to-r from-[#FFD700]/90 to-[#FF6F61]/90 text-black mx-4 mt-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-    <div class="container mx-auto px-6 py-5 text-center text-sm md:text-base">
-      <p class="leading-relaxed">
-        <strong>Información Importante:</strong><br />
-        Esta ISO fue optimizada y creada con NTLite, una herramienta profesional que cualquiera puede usar. La versión gratuita es muy poderosa, aunque también hay una versión premium con características adicionales.<br /><br />
-        <strong>Seguridad:</strong><br />
-        Recomiendo encarecidamente que cada usuario cree su propia ISO personalizada siguiendo las guías disponibles en nuestro sitio web o en el foro de NTLite para garantizar la máxima seguridad y control.<br />
-        • <a
-          href="https://www.ntlite.com/community/index.php"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="font-bold underline hover:text-[#2d2d2d] transition-colors"
-          aria-label="Foro oficial de NTLite"
-        >
-          Guías oficiales
-        </a><br />
-        • Nuestras guías{" "}
-        <a
-          href="/guias"
-          class="font-bold underline hover:text-[#2d2d2d] transition-colors"
-        >
-          aquí
-        </a><br /><br />
-        Personaliza tu propia ISO para evitar problemas y obtener un sistema limpio y seguro.
+<BaseLayout title="Descargas">
+
+  <!-- Hero Section -->
+  <!-- container mx-auto px-4 text-center relative z-10 -->
+
+
+  <div class="container mx-auto px-4 text-center relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#294bbc] to-[#b6c2fa]">
+          Descargas
+        </span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block">
+        Encuentra las últimas versiones de CodeXtremeOS aquí.
       </p>
     </div>
   </div>
-
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-[#1A1A1A] text-white py-24 overflow-hidden">
-    <div class="container mx-auto text-center px-4 relative z-10">
-      <div class="max-w-3xl mx-auto">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#6B5B95]">
-            Descargas
-          </span>
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block">
-          Encuentra las últimas versiones de CodeXtremeOS aquí.
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!-- Sección Principal -->
   <main class="bg-gradient-to-br from-[#F4F4F4] to-[#eaeaea] dark:from-[#1A1A1A] py-16 relative">

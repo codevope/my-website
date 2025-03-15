@@ -30,7 +30,7 @@
   
     /* Definimos los colores de fondo personalizados por cada categoría */
     .category-1 {
-        background: linear-gradient(135deg, #6B5B95, #8B7CB0); /* Fondo personalizado para categoría 1 */
+        background: linear-gradient(135deg, #b6c2fa, #8B7CB0); /* Fondo personalizado para categoría 1 */
     }
   
     .category-2 {
@@ -38,7 +38,7 @@
     }
   
     .category-3 {
-        background: linear-gradient(135deg, #FF6F61, #6B5B95); /* Fondo personalizado para categoría 3 */
+        background: linear-gradient(135deg, #294bbc, #b6c2fa); /* Fondo personalizado para categoría 3 */
     }
   }
   
@@ -46,7 +46,6 @@
   body, .bg-page {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: 'Arial', sans-serif; /* Fuente más limpia */
     line-height: 1.6; /* Mejor legibilidad */
   }
   

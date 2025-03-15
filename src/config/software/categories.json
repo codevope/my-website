@@ -2,14 +2,14 @@
   {
     "title": "Categoría 1",
     "borderColor": "text-blue-500",
-    "gradientFrom": "#6B5B95",
+    "gradientFrom": "#b6c2fa",
     "gradientTo": "#8B7CB0",
     "tools": [
       {
         "title": "Software 1",
         "description": "Descripción del software 1",
         "tags": [
-          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Windows", "color": "#b6c2fa" },
           { "label": "Open Source", "color": "blue" },
           { "label": "Estable", "color": "green" }
         ],
@@ -21,7 +21,7 @@
         "title": "Software 2",
         "description": "Descripción del software 2",
         "tags": [
-          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Windows", "color": "#b6c2fa" },
           { "label": "Open Source", "color": "blue" },
           { "label": "Estable", "color": "green" }
         ],
@@ -33,7 +33,7 @@
         "title": "Software 3",
         "description": "Descripción del software 3",
         "tags": [
-          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Windows", "color": "#b6c2fa" },
           { "label": "Open Source", "color": "blue" },
           { "label": "Estable", "color": "green" }
         ],
@@ -45,7 +45,7 @@
         "title": "Software 4",
         "description": "Descripción del software 4",
         "tags": [
-          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Windows", "color": "#b6c2fa" },
           { "label": "Open Source", "color": "blue" },
           { "label": "Estable", "color": "green" }
         ],
@@ -57,7 +57,7 @@
         "title": "Software 5",
         "description": "Descripción del software 5",
         "tags": [
-          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Windows", "color": "#b6c2fa" },
           { "label": "Open Source", "color": "blue" },
           { "label": "Estable", "color": "green" }
         ],
@@ -69,7 +69,7 @@
         "title": "Software 6",
         "description": "Descripción del software 6",
         "tags": [
-          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Windows", "color": "#b6c2fa" },
           { "label": "Open Source", "color": "blue" },
           { "label": "Estable", "color": "green" }
         ],
@@ -81,7 +81,7 @@
         "title": "Software 7",
         "description": "Descripción del software 7",
         "tags": [
-          { "label": "Windows", "color": "#6B5B95" },
+          { "label": "Windows", "color": "#b6c2fa" },
           { "label": "Open Source", "color": "blue" },
           { "label": "Estable", "color": "green" }
         ],
@@ -179,14 +179,14 @@
   {
     "title": "Categoría 3",
     "borderColor": "text-purple-500",
-    "gradientFrom": "#FF6F61",
-    "gradientTo": "#6B5B95",
+    "gradientFrom": "#294bbc",
+    "gradientTo": "#b6c2fa",
     "tools": [
       {
         "title": "Software 15",
         "description": "Descripción del software 15",
         "tags": [
-          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Windows", "color": "#294bbc" },
           { "label": "Estable", "color": "blue" }
         ],
         "link": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.7/npp.8.7.7.Installer.x64.exe",
@@ -197,7 +197,7 @@
         "title": "Software 16",
         "description": "Descripción del software 16",
         "tags": [
-          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Windows", "color": "#294bbc" },
           { "label": "Estable", "color": "red" }
         ],
         "link": "https://7-zip.org/a/7z2409-x64.exe",
@@ -208,7 +208,7 @@
         "title": "Software 17",
         "description": "Descripción del software 17",
         "tags": [
-          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Windows", "color": "#294bbc" },
           { "label": "Estable", "color": "red" }
         ],
         "link": "https://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.exe",
@@ -219,7 +219,7 @@
         "title": "Software 18",
         "description": "Descripción del software 18",
         "tags": [
-          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Windows", "color": "#294bbc" },
           { "label": "Estable", "color": "blue" }
         ],
         "link": "https://es.libreoffice.org/colabora/dl/win-x86_64/25.2.0/es/LibreOffice_25.2.0_Win_x86-64.msi",
@@ -230,7 +230,7 @@
         "title": "Software 19",
         "description": "Descripción del software 19",
         "tags": [
-          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Windows", "color": "#294bbc" },
           { "label": "Estable", "color": "purple" }
         ],
         "link": "https://github.com/paintdotnet/release/releases/download/v5.1.4/paint.net.5.1.4.install.anycpu.web.zip",
@@ -241,7 +241,7 @@
         "title": "Software 20",
         "description": "Descripción del software 20",
         "tags": [
-          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Windows", "color": "#294bbc" },
           { "label": "Estable", "color": "green" }
         ],
         "link": "https://www.winrar.es/descargas/103/descargar-winrar-para-windows-x64-en-espa-ol",
@@ -252,7 +252,7 @@
         "title": "Software 21",
         "description": "Descripción del software 21",
         "tags": [
-          { "label": "Windows", "color": "#FF6F61" },
+          { "label": "Windows", "color": "#294bbc" },
           { "label": "Estable", "color": "orange" }
         ],
         "link": "https://download.cpuid.com/cpu-z/cpu-z_2.14-en.zip",

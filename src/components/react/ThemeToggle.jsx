@@ -1,23 +1,29 @@
-import { themeStore, toggleTheme } from '@/stores/themeStore';
-import { useStore } from '@nanostores/react';
+import { MoonIcon, SunIcon } from "@/components/react/shared/Icons";
+import { themeStore, toggleTheme } from "@/stores/themeStore";
+import { useStore } from "@nanostores/react";
+import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
   const theme = useStore(themeStore);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // Evitar FOUC en SSR
 
   return (
-    <button 
+    <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gradient-to-br from-[#FF6F61] to-[#6B5B95] hover:from-[#FF8C78] hover:to-[#8B7CB0] transition-all duration-300 relative group shadow-md hover:shadow-lg"
+      className="p-2 transition-all duration-300 relative group"
       aria-label="Cambiar tema"
     >
       <div className="flex items-center justify-center w-6 h-6">
-        <span className="text-lg transition-transform duration-300">
-          {theme === 'light' ? '🌙' : '☀️'}
+        <span className="text-lg transition-transform duration-300 text-gray-600 dark:text-gray-200 group-hover:scale-110">
+          {theme === "light" ? <MoonIcon /> : <SunIcon />}
         </span>
       </div>
-      <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md">
-        Cambiar tema
-      </span>
     </button>
   );
 };

@@ -1,6 +1,7 @@
 ---
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
+import Header from "@/components/astro/Header.astro";
+import Footer from "@/components/astro/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 import "@/styles/global.css";
 ---
 
@@ -12,57 +13,30 @@ import "@/styles/global.css";
 
     <!-- Título SEO -->
     <title>Codevo</title>
+    <ClientRouter />
 
     <!-- Meta Tags SEO -->
-    <meta
-      name="description"
-      content="Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea."
-    />
+    <meta name="description" content="Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea." />
     <meta name="robots" content="index, follow" />
-    <meta
-      name="keywords"
-      content="desarrollo web, soluciones digitales, Codevo, empresa de desarrollo web, servicios web, diseño web"
-    />
+    <meta name="keywords" content="desarrollo web, soluciones digitales, Codevo, empresa de desarrollo web, servicios web, diseño web" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Codevo - Desarrollo Web" />
-    <meta
-      property="og:description"
-      content="Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea."
-    />
-    <meta
-      property="og:image"
-      content="https://www.codevo.pe/logo_social.png"
-    />
+    <meta property="og:description" content="Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea." />
+    <meta property="og:image" content="https://www.codevo.pe/assets/img/logo_social.png" />
     <meta property="og:url" content="https://www.codevo.pe/" />
 
     <!-- Favicon y iconos -->
     <link rel="icon" href="/assets/img/codevo.ico" sizes="32x32" />
-    <meta name="theme-color" content="#6B5B95" />
+    <meta name="theme-color" content="#b6c2fa" />
 
-    <!-- Schema Markup JSON-LD -->
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "url": "https://www.codevo.pe",
-        "name": "Codevo",
-        "description": "Codevo, tu socio en desarrollo web. Creamos soluciones digitales a medida para potenciar tu negocio en línea.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.codevo.pe/buscar?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
   </head>
   <body
-    class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 pt-20 min-h-screen"
+    class="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-100 dark:to-gray-200  text-gray-100 pt-20 min-h-screen"
   >
     <Header />
     <main class="min-h-[calc(100vh-8rem)]">
-      <!-- Contenido -->
       <slot />
     </main>
     <Footer />
